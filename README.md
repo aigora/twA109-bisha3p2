@@ -13,3 +13,5 @@ Marcos Lozano Rodríguez - marcoslozanorodriguez
 Aprender a utilizar el lenguaje C++ para capacitar un sistema de riego.
 Ser capaz de conectar un arduino junto a sensores al ordenador con el que controlar las variables de la temperatura y la humedad.
 
+## Sensores
+Sensor de temperatura y humedad relativa en el aire DHT11
