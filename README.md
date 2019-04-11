@@ -18,4 +18,32 @@ Poder mostrar una representación de la programación teórica que recibimos en 
 Sensor de temperatura y humedad relativa en el aire DHT11
 
 ## Funciones utilizadas
+Una función dentro del menú principal para elegir la temperatura mínima para que regar sea necesario.
+int elegir_temperatura_minima (void)
+{
+	int temperaturaminima;
+	printf("Introduzca un valor para la temperatura minima:\n");
+	scanf("%d",&temperaturaminima);
+	return temperaturaminima;
+	  
+}
+Una función dentro del menú principal para elegir la humedad mínima para que regar sea necesario.
+{
+	int humedadminima;
+	printf("Introduzca un valor para la humedad minima:\n");
+	scanf("%d",&humedadminima);
+	return humedadminima;
+	  
+}
 
+
+Una función que reciba los valores de temperatura y humedad de los sensores para determinar si es necesario regar.
+int es_necesario_regar (float, int);
+int es_necesario_regar (float temperatura, int humedad)
+{
+	int regar=1;
+	if (temperatura<temperaturaminima || humedad<humedadminima)
+	regar=0;
+	return regar;
+	  
+}
