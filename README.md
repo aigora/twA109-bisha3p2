@@ -16,3 +16,6 @@ Poder mostrar una representación de la programación teórica que recibimos en 
 
 ## Sensores
 Sensor de temperatura y humedad relativa en el aire DHT11
+
+## Funciones utilizadas
+
