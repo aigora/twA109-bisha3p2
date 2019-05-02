@@ -169,3 +169,5 @@ if (readResult!=0)
 if (!isConnected(arduino))
  printf ("Se ha perdido la conexion con Arduino\n");
 }
+## Nota
+Ya que a la hira de guardar el código en esta plataforma se como los saltos de línea adjuntamos fotos de los códigos
