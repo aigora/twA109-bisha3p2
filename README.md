@@ -1,6 +1,6 @@
 # Sistema de riego
 
-Nuestro proyecto se basa en crear un sistema de riego automático que trabaje en función de la humedad del suelo y la temperatura ambiente, cuyos valores se introducirían a traves del ordenador. 
+Nuestro proyecto se basa en crear un sistema de riego automático que trabaje en función de la humedad del suelo y la temperatura ambiente, en función de unos valores establecidos en arduino, de modo que si el sistema se ha puesto en funcionamiento el ordenador mostrará la hora, la fecha, y los valores de temperatura y humedad. 
 
 ## Integrantes del equipo 
 
@@ -12,41 +12,21 @@ Marcos Lozano Rodríguez - marcoslozanorodriguez
 
 Aprender a utilizar el lenguaje C++ para capacitar un sistema de riego.
 Ser capaz de conectar un arduino junto a sensores al ordenador con el que controlar las variables de la temperatura y la humedad.
-Poder mostrar una representación de la programación teórica que recibimos en clase en la vida real,viendo las acciones que toma el programa en un terreno bajo un sistema de riego que se efectua bajo unos estados y condiciones determinadas
+Poder mostrar una representación de la programación teórica que recibimos en clase en la vida real,viendo las acciones que toma el programa en un terreno bajo un sistema de riego que se efectua bajo unos estados y condiciones determinadas.
+## Funcionamiento
+
+Mediante el sensor de humedad y temperatura recogemos los valores de temperatura y humedad, de tal forma que si la temperatura está entre 20 y 30 grados Celsius y el porcentaje de humedad se encuentra entre el 20% y el 40%, el riego se activará durante un tiempo, en este caso para simular el riego se utilizará un LED. El ordenador recibe estos datos y muestra la hora, la fecha y los valores regustrados cuando se ha activado el riego.
 
 ## Sensores
-Sensor de temperatura y humedad relativa en el aire DHT11
+Sensor de temperatura y humedad relativa en el aire DHT11.
 
 ## Funciones utilizadas
-Una función dentro del menú principal para elegir la temperatura mínima para que regar sea necesario.
-int elegir_temperatura_minima (void)
-{
-	int temperaturaminima;
-	printf("Introduzca un valor para la temperatura minima:\n");
-	scanf("%d",&temperaturaminima);
-	return temperaturaminima;
-	  
-}
-Una función dentro del menú principal para elegir la humedad mínima para que regar sea necesario.
-{
-	int humedadminima;
-	printf("Introduzca un valor para la humedad minima:\n");
-	scanf("%d",&humedadminima);
-	return humedadminima;
-	  
-}
+Función para devolver la hora: struct tm* time(time_t)
+Función para la fecha: size_t strftime(char *,size_t,char *,struct tm *)
+Función para la conexión ordenador-arduino: void autoConnect(SerialPort *arduino,char*)
 
 
-Una función que reciba los valores de temperatura y humedad de los sensores para determinar si es necesario regar.
-int es_necesario_regar (float, int);
-int es_necesario_regar (float temperatura, int humedad)
-{
-	int regar=1;
-	if (temperatura<temperaturaminima || humedad<humedadminima)
-	regar=0;
-	return regar;
-	  
-}
+
 ## Código en arduino
 #include "DHT.h"
 #define DHTPIN 2    
@@ -170,4 +150,4 @@ if (!isConnected(arduino))
  printf ("Se ha perdido la conexion con Arduino\n");
 }
 ## Nota
-Ya que a la hira de guardar el código en esta plataforma se como los saltos de línea adjuntamos fotos de los códigos
+Ya que a la hora de guardar el código en esta plataforma se come los saltos de línea adjuntamos fotos de los códigos
