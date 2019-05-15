@@ -15,10 +15,10 @@ Ser capaz de conectar un arduino junto a sensores al ordenador con el que contro
 Poder mostrar una representación de la programación teórica que recibimos en clase en la vida real,viendo las acciones que toma el programa en un terreno bajo un sistema de riego que se efectua bajo unos estados y condiciones determinadas.
 ## Funcionamiento
 
-Mediante el sensor de humedad y temperatura recogemos los valores de temperatura y humedad, de tal forma que si la temperatura está entre 20 y 30 grados Celsius y el porcentaje de humedad se encuentra entre el 20% y el 40%, el riego se activará durante un tiempo, en este caso para simular el riego se utilizará un LED. El ordenador recibe estos datos y muestra la hora, la fecha y los valores regustrados cuando se ha activado el riego.
+Mediante el sensor de humedad y temperatura recogemos los valores de temperatura y humedad, de tal forma que si la temperatura está entre 20 y 30 grados Celsius y el porcentaje de humedad se encuentra entre el 20% y el 40%, el riego se activará durante un tiempo, en este caso para simular el riego se utilizará un LED. El ordenador recibe estos datos y muestra la hora, la fecha y los valores registrados cuando se ha activado el riego.
 
 ## Sensores
-Sensor de temperatura y humedad relativa en el aire DHT11.
+Sensor de temperatura y humedad relativa en el aire DHT22.
 
 ## Funciones utilizadas
 Función para devolver la hora: struct tm* time(time_t)
